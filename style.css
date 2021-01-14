@@ -1,0 +1,159 @@
+body {
+  height: 100%;
+  background-color: pink;
+}
+
+button:focus {
+  outline: none;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes nudge {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
+}
+
+.nudge {
+  animation: nudge 0.3s;
+  animation-iteration-count: infinite;
+}
+
+.welcomePage {
+  position: absolute;
+  margin: auto;
+  left: 15%;
+  text-align: center;
+  font-family: "Concert One", cursive;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 0;
+}
+
+img {
+  width: 200px;
+  height: 300 px;
+  animation: move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.welcomeTop {
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.welcomeTop > h1 {
+  font-size: 60px;
+  align-self: center;
+  margin-left: 5%;
+}
+
+.selection {
+  text-align: left;
+  margin-left: 30%;
+  font-size: x-large;
+}
+
+.checkbox {
+  margin: 3px 10px 3px 3px;
+}
+
+.gamePageTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: xx-large;
+}
+
+.gamePageTop > div {
+  margin-left: 20%;
+  margin-right: 20%;
+  color: grey;
+}
+
+button,
+.optionButton {
+  font-size: x-large;
+  background-color: pink;
+  border-color: whitesmoke;
+  border-radius: 10px;
+  width: 150px;
+  height: 35px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 3%;
+}
+
+.optionButton {
+  width: 500px;
+  height: 50px;
+  color: white;
+  margin-top: 1%;
+}
+
+.optionButton:hover {
+  background-color: lightgray;
+  color: grey;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+}
+
+.message {
+  font-size: 30px;
+  color: grey;
+  font-weight: 900;
+}
+
+#question {
+  width: 500px;
+  height: 100px;
+  font-size: 80px;
+  text-align: center;
+  color: white;
+}
+
+.gameOver {
+  color: grey;
+  text-align: center;
+}
+
+.gameOver > h1 {
+  font-size: 100px;
+}

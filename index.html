@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <title>Arithmetic game! &#x1F9D0; </title>
+</head>
+<body>
+    <div class="welcomePage">
+        <div class="welcomeTop">
+            <img src="img/brain.png">
+            <h1>Welcome to Arithmetic Game!</h1>
+        </div>
+        
+        <h2>Challenge how far you can go before the time runs out! <br>
+        Click on the correct answer as fast and accurate as possible <br>
+        +10 points and +1 second for every correct answer <br>
+        -5 points and -2 seconds for every wrong answer <br><br>
+        Easy? <br><br>
+        Start by selecting the arithmetic operator you want to play with. Once done, click on the start button
+        </h2>
+        <div class="selection">
+            <input type="checkbox" value="+" name="arithmetic" id="addition" class="checkbox">Addition:             
+                <select name="addition" class="addition first dropdown" id="additionFirst" disabled>
+                    <option value="" selected disabled>--Pls select--</option>
+                    <option value="additionFirstSingle">single digit</option>
+                    <option value="additionFirstDouble">double digit</option>
+                </select> + 
+                <select name="addition" class="addition second dropdown" id="additionSecond" disabled >
+                    <option value="" selected disabled>--Pls select--</option>
+                    <option value="additionSecondSingle">single digit</option>
+                    <option value="additionSecondDouble">double digit</option>
+                </select> <br>
+
+            <input type="checkbox" value="-" name="arithmetic" id="substraction" class="checkbox">Subtraction:
+            <select name="substraction" class="substraction first dropdown" id="subsFirst" disabled>
+                <option value="" selected disabled>--Pls select--</option>
+                <option value="subsFirstSingle">single digit</option>
+                <option value="subsFirstDouble">double digit</option>
+            </select> -
+            <select name="substraction" class="substraction second dropdown" id="subsSecond" disabled>
+                <option value="" selected disabled>--Pls select--</option>
+                <option value="subsSecondSingle">single digit</option>
+                <option value="subsSecondDouble">double digit</option>
+            </select> <br>
+
+            <input type="checkbox" value="*" name="arithmetic" id="multiplication" class="checkbox">Multiplication:
+            <select name="multiplication" class="multiplication first dropdown" id="mulFirst" disabled>
+                <option value="" selected disabled>--Pls select--</option>
+                <option value="mulFirstSingle">single digit</option>
+                <option value="mulFirstDouble">double digit</option>
+            </select> *
+            <select name="multiplication" class="multiplication second dropdown" id="mulSecond" disabled>
+                <option value="" selected disabled>--Pls select--</option>
+                <option value="mulSecondSingle">single digit</option>
+                <option value="mulSecondDouble">double digit</option>
+            </select> <br>
+
+            <input type="checkbox" value="/" name="arithmetic">Division - Reverse of multiplication - random
+        </div>
+        <button type="submit" id="startButton" >start</button>
+    </div>
+    
+    <div class="gamePage" style="margin-top: 50px">
+        <div class="gamePageTop">
+            <div>Timer <br> <span id="timer"></span></div>
+            <div style="text-align: right">Score <br> <span id="score">0</span></div>
+        </div>
+        
+        <div class="game">
+            <p class="message"></p>
+            <div id="question">questions will appear here</div>
+            <button id="option1" class="optionButton">option1</button> <br>
+            <button id="option2" class="optionButton">option2</button> <br>
+            <button id="option3" class="optionButton">option3</button> <br>
+            <button id="option4" class="optionButton">option4</button> <br>
+        </div>
+    </div>
+
+    <div class="gameOver">
+        <h1>GAME OVER</h1>
+        <h2>YOUR SCORE IS: <span id="scoreResult"></span></h1>
+        <h2>HIGHSCORE: <span id="highscore"></span></h1>
+        <button id="playAgain">Play again</button>
+        <button id="quit">Quit</button>
+    </div>
+    
+</body>
+</html>
